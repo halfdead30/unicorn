@@ -1,0 +1,89 @@
+.header {
+	.row {
+		@include sm-block(){
+			margin: 0;
+		}
+	}
+	&--modifier {
+		background: url('../img/general/top_bg.jpg') 0 0 no-repeat;
+		background-size: cover;
+		padding: 56px 0 90px;
+		@include xs-block(){
+			padding-top: 30px;
+		}
+	}
+	&-logo {
+		@include xs-block(){
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+	&-nav {
+		display: flex;
+		margin-left: auto;
+		@include xs-block(){
+			display: none;
+		}
+		&__list {
+			display: flex;
+			&-link {
+				margin-left: 12px;
+				&:first-child {
+					margin-left: 0;
+				}
+				a {
+					font-family: $boldFont;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	&-banner {
+		padding-top: 380px;
+		width: 100%;
+		max-width: 570px;
+		text-align: right;
+		margin-left: auto;
+		@include sm-block(){
+			text-align: right;
+			padding-top: 260px;
+		}
+		@include xs-block(){
+			padding-top: 72px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		&__title {
+			position: relative;
+			text-transform: uppercase;
+			&::after {
+				content: '';
+			    display: block;
+			    margin: 29px 0 48px auto;
+			    width: 140px;
+			    height: 4px;
+			    background-color: #000;
+			    @include xs-block(){
+		    	    margin: 29px auto;
+			    }
+			}
+		}
+		&__text {
+			font-size: 18px;
+			line-height: 34px;
+			padding-bottom: 64px;
+		}
+		&__btn {
+		    font-family: "SourceSansProBold", Arial, sans-serif;
+		    font-size: 18px;
+		    display: inline-block;
+		    width: 100%;
+		    max-width: 270px;
+		    height: 50px;
+		    line-height: 50px;
+		    color: #212121;
+		    border: 2px solid #232323;
+		    text-align: center;
+		}
+	}
+}

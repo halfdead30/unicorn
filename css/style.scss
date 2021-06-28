@@ -1,0 +1,86 @@
+//Vars and styles
+@import "vars/_vars";
+@import "common/_common-styles";
+
+//Grid 
+@import "grid/smart-grid.scss";
+
+//Blocks
+@import "blocks/_header";
+@import "blocks/_who";
+@import "blocks/_features";
+@import "blocks/_featured-articles";
+@import "blocks/_articles";
+@import "blocks/_clients";
+@import "blocks/_portfolio";
+@import "blocks/_quote";
+@import "blocks/_team";
+@import "blocks/_facts";
+@import "blocks/_blog";
+@import "blocks/_articles-slider";
+@import "blocks/_twits";
+@import "blocks/_footer";
+
+html {
+    line-height: 1;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: $mainFont;
+    color: $mainColor;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $boldFont;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+section {
+    position: relative;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    @include container();
+}
+
+.row {
+    @include row();
+}

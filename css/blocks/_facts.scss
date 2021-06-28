@@ -1,0 +1,61 @@
+.facts {
+	&--modifier {
+		padding: 106px 0 145px;
+		background: url('../img/general/facts_bg.jpg') 0 0 no-repeat;
+		background-size: cover;
+		color: $whiteColor;
+		@include sm-block(){
+			padding: 50px 0;
+		}
+	}
+	&-title {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&-wrap {
+		position: relative;
+		width: 100%;
+		max-width: 830px;
+		margin: 0 auto;
+		padding: 60px 50px 10px 50px;
+		background-color: rgba(255, 255, 255, 0.34);
+		text-align: center;
+		@include xs-block(){
+			padding: 30px 10px 20px;;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+		    bottom: -4px;
+		    left: 50%;
+		    margin-left: -37.5px;
+		    display: block;
+		    width: 75px;
+		    height: 4px;
+		    background-color: $orangeColor;
+		}
+		&__item {
+			@include col();
+			@include size(6);
+			@include size-xs(12);
+			margin-bottom: 50px;
+			@include xs-block(){
+				margin-bottom: 30px;
+			}
+			&-number {
+				font-size: 27px;
+				&::after {
+				    content: '';
+				    display: block;
+				    width: 75px;
+				    height: 4px;
+				    margin: 20px auto 10px;
+				    background-color: $darkestGrayColor;
+				}
+			}
+			&-title {
+				font-size: 24px;
+			}
+		}
+	}
+}

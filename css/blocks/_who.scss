@@ -1,0 +1,36 @@
+.who {
+	&--modifier {
+		padding: 98px 0 120px;
+		@include sm-block(){
+			padding: 50px 0;
+		}
+	}
+	&-item {
+		@include col();
+		@include size(12);
+		text-align: center;
+		&__ico {
+			&::before {
+				content: "";
+				display: block;
+				background: url('../img/ico/broccoli.png') 0 0 no-repeat;
+				background-size: cover;
+				width: 39px;
+				height: 39px;
+				margin: 0 auto;
+			}
+		}
+		&__title {
+			padding: 23px 0 79px;
+			@include sm-block(){
+				padding: 23px 0 40px;
+			}
+		}
+		&__text {
+			width: 100%;
+			max-width: 970px;
+			margin: 0 auto;
+			line-height: 33px;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+.portfolio {
+	&--modifier {
+    	padding: 109px 0 60px;
+    	@include sm-block(){
+    		padding: 50px 0;
+    	}
+	}
+	&-title {
+		text-align: center;
+		padding-bottom: 52px;
+	}
+	&-text {
+		position: relative;
+		width: 100%;
+		max-width: 770px;
+		margin: 0 auto;
+		line-height: 33px;
+		text-align: center;
+		&::after {
+			content: '';
+			display: block;
+			width: 75px;
+			height: 7px;
+			background-color: $orangeColor;
+			margin: 45px auto 55px;
+		}
+	}
+	&-filter {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 40px;
+		&__item {
+			margin: 0 15px;
+			@include xs(margin, 0 10px);
+			cursor: pointer;
+    		transition: 0.3s ease-in-out;
+    		&:hover {
+    			color: $orangeColor;
+    			text-decoration: underline;
+    		}
+		}
+		&.portfolio-filter__item--all {
+            display: none;
+        }
+	}
+	&-slider {
+		display: none;
+	}
+	&-dots {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $darkGrayColor;
+        border-radius: 50%;
+    }
+}
+
+.slick-active {
+    .portfolio {
+        &-dots {
+            background-color: $orangeColor;
+        }
+    }
+}
+
+.slick-dots {
+	bottom: -50px;
+}

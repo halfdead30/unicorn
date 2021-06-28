@@ -1,0 +1,94 @@
+.featured {
+	&--modifier {
+		padding: 109px 0 144px;
+		@include sm-block(){
+			padding: 40px 0 60px;
+		}
+	}
+	&-title {
+		text-align: center;
+	}
+	&-text {
+		width: 100%;
+		max-width: 770px;
+		margin: 0 auto;
+		padding: 46px 0 107px;
+		line-height: 33px;
+		text-align: center;
+		@include sm-block(){
+			padding: 40px 15px;
+		}
+	}
+}
+
+.featured {
+	&-item {
+		color: $whiteColor;
+		background-color: $darkBgColor;
+		padding: 60px 14px 110px 40px;
+		height: 360px;
+		@include col();
+		@include size(4);
+		&__filter {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+		&__text {
+			font-size: 24px;
+			line-height: 33px;
+			padding: 36px 0 90px;
+			@include xs-block(){
+				padding: 36px 0 52px;
+			}
+		}
+		&__bottom {
+			display: flex;
+			align-items: center;
+			&-text {
+				margin-left: 15px;
+				text-transform: uppercase;
+				p {
+					&:first-child {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.featured-slider {
+	position: relative;
+	&__prev {
+		left: -5%;
+		background: url("../img/svg/left-arrow.svg") 0 0 no-repeat;
+		background-size: 100%;
+		@include sm-block(){
+			left: 40%;
+		}
+	}
+	&__next {
+		right: -5%;
+		background: url("../img/svg/right-arrow.svg") 0 0 no-repeat;
+		background-size: 100%;
+		@include sm-block(){
+			right: 40%;
+		}
+	}
+	& .slick-disabled {
+		opacity: 0;
+	}
+	& .slick-arrow {
+	    position: absolute;
+		top: 50%;
+		margin-top: -7px;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+		@include sm-block(){
+			top: auto;
+			bottom: -40px;
+			margin: 0;
+		}
+	}
+}

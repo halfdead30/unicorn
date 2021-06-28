@@ -1,0 +1,158 @@
+.footer {
+	&--modifier {
+		padding: 76px 0 41px;
+		background-color: $mainColor;
+		color: $footerTextColor;
+		@include sm-block(){
+			padding: 40px 0;
+		}
+	}
+	&-top {
+		display: flex;
+		flex-wrap: wrap;
+		&__left {
+			@include col();
+			@include size(5);
+			@include size-sm(12);
+			margin: 0;
+			margin-right: auto;
+			@include sm-block(){
+				margin: 0 15px;
+			}
+			&-text {
+				font-size: 14px;
+				padding: 37px 0 40px;
+				line-height: 24px;
+			}
+		}
+		&__right {
+			display: flex;
+			width: 100%;
+			max-width: 600px;
+			margin-left: auto;
+			@include sm-block(){
+				margin: 0 auto 40px;
+    			text-align: center;
+			}
+		}
+	}
+	// end of footer top
+	&-bottom {
+		display: flex;
+		justify-content: space-between;
+		@include sm-block(){
+			flex-direction: column;
+			align-items: center;
+		}
+		&__disclaimer {
+			font-size: 14px;
+			@include sm-block(){
+				text-align: center;
+				margin-top: 20px;
+    			order: 1;
+			}
+		}
+		&__menu {
+			&-list {
+				display: flex;
+				li {
+					&:first-child {
+						margin-left: 0;
+					}
+					margin-left: 33px;
+					text-transform: uppercase;
+					a {
+						color: $footerTextColor;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	// footer-menu (находится в .footer-top__right)
+	&-menu {
+		width: 30%;
+    	margin-right: 5%;
+		&__title {
+			text-transform: uppercase;
+			color: $whiteColor;
+			margin-bottom: 36px;
+		}
+		&__list {
+			li {
+				&:last-child {
+					margin-bottom: 0;
+				}
+				margin-bottom: 17px;
+				a {
+					font-size: 14px;
+					color: $footerTextColor;
+				}
+			}
+		}
+	}
+	&-form {
+		&__input {
+			border: none;
+			background: none;
+			border-bottom: 1px solid $darkBorderColor;
+			width: 45%;
+			margin-bottom: 20px;
+			padding-bottom: 8px;
+			text-transform: uppercase;
+			&:last-child {
+				margin-left: 30px;
+				@include xs-block(){
+					margin-left: 20px;
+				}
+			}
+		}
+		&__text {
+			font-size: 14px;
+			line-height: 24px;
+			border: none;
+			background: none;
+			border-bottom: 1px solid $darkBorderColor;
+			margin-bottom: 50px;
+			padding-bottom: 8px;
+			text-transform: uppercase;
+			width: 97%;
+			height: 35px;
+		}
+		&__btn {
+			position: relative;
+			display: inline-block;
+    		padding-right: 10px;
+    		padding-bottom: 36px;
+    		input {
+    			border: none;
+    			border-bottom: 1px solid $darkBorderColor;
+    			color: $footerTextColor;
+    			background: none;
+    			text-transform: uppercase;
+    		}
+    		&::after {
+				content: '';
+			    position: absolute;
+			    right: 0;
+			    top: 3px;
+			    width: 0;
+			    height: 0;
+			    border-style: solid;
+			    border-width: 5px 0 5px 6px;
+			    border-color: transparent transparent transparent $footerTextColor;
+    		}
+		}
+	}
+}
+
+.footer-logo {
+	font-size: 22px;
+}
+
+.disc-bottom {
+	margin-top: 16px;
+}

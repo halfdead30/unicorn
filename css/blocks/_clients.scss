@@ -1,0 +1,51 @@
+.clients {
+	&--modifier {
+		padding: 67px 0 110px;
+		background-color: $grayBgColor;
+	}
+	&-title {
+		text-align: center;
+		padding-bottom: 65px;
+	}
+	& .slick-disabled {
+		opacity: 0;
+	}
+	& .slick-arrow {
+	    position: absolute;
+		top: 50%;
+		margin-top: -7px;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+		@include lg-block(){
+			top: auto;
+			bottom: -50px;
+			margin: 0px;
+		}
+	}
+}
+
+.clients-slider {
+	position: relative;
+	&__prev {
+		left: -5%;
+		background: url("../img/svg/left-arrow.svg") 0 0 no-repeat;
+		background-size: 100%;
+		@include lg-block(){
+			left: 40%;
+		}
+	}
+	&__next {
+		right: -5%;
+		background: url("../img/svg/right-arrow.svg") 0 0 no-repeat;
+		background-size: 100%;
+		@include lg-block(){
+			right: 40%;
+		}
+	}
+}
+
+.js-clients__slider .slick-slide {
+	display: flex;
+	justify-content: center;
+}

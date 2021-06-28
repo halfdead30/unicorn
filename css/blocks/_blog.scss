@@ -1,0 +1,53 @@
+.blog {
+	padding: 70px 0;
+	@include sm-block(){
+		padding-top: 40px;
+	}
+	.row {
+		align-items: center;
+		@include sm-block(){
+			align-items: flex-start;
+		}
+	}
+	&-item {
+		@include col();
+		@include size(6);
+		@include size-xs(12);
+		text-align: center;
+		@include xs-block(){
+			padding-bottom: 10px;
+		}
+		&__date {
+			font-size: 14px;
+			color: $lightGrayColor;
+		}
+		&__title {
+			padding: 24px 0 60px;
+			@include sm-block(){
+				padding: 24px 0;
+			}
+		}
+		&__text {
+			line-height: 28px;
+		}
+		&:nth-child(4) {
+			@include xs-block(){
+				order: -2;
+			}
+		}
+	}
+	&-img {
+		@include col();
+		@include size(6);
+		@include size-xs(12);
+		padding-bottom: 46px;
+		&:last-child {
+			padding-bottom: 0;
+		}
+		&:nth-child(3) {
+			@include xs-block(){
+				order: -1;
+			}
+		}
+	}
+}

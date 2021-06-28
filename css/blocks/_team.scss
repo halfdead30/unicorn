@@ -1,0 +1,52 @@
+.team {
+	.row {
+		align-items: flex-end;
+	}
+	&--modifier {
+		padding: 109px 0 137px;
+		@include sm-block(){
+			padding: 50px 0;
+		}
+	}
+	&-block {
+		@include col();
+		@include size(12);
+		text-align: center;
+		&__text {
+			width: 100%;
+			max-width: 770px;
+			margin: 0 auto;
+			line-height: 33px;
+			padding: 60px 0 104px;
+			@include xs-block(){
+				padding: 60px 0;
+			}
+		}
+	}
+	&-item {
+		@include col();
+		@include size(3);
+		@include size-xs(12);
+		text-align: center;
+		@include xs-block(){
+			margin-bottom: 30px;
+		}
+		&:last-child {
+			@include xs-block(){
+				margin-bottom: 0;
+			}
+		}
+		&__name {
+			font-family: $boldFont;
+			font-size: 18px;
+			padding: 55px 0 20px;
+			text-transform: uppercase;
+			@include xs-block(){
+				padding: 20px 0;
+			}
+		}
+		&__job {
+			font-size: 15px;
+		}
+	}
+}

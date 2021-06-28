@@ -1,0 +1,39 @@
+.twitts {
+	&--modifier {
+		padding: 76px 0 97px;
+		@include sm-block(){
+			padding: 40px 0;
+		}
+	}
+	&-item {
+		width: 100%;
+		max-width: 830px;
+		margin: 0 auto;
+		text-align: center;
+		@include xs-block(){
+			padding: 0 15px;
+		}
+		&__ico {
+			&::before {
+            content: '';
+            display: block;
+            margin: 0 auto 20px;
+            background: url('../img/svg/twitter.svg') 0 0 no-repeat;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+        	}
+		}
+		&__text {
+			font-size: 20px;
+			line-height: 38px;
+			padding: 40px 0;
+			@include sm-block(){
+				padding: 20px 0;
+			}
+		}
+		&__author {
+			font-family: $boldFont;
+		}
+	}
+}
